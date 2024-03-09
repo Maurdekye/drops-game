@@ -145,7 +145,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             .max_by_key(|(_, &d)| d)
             .expect("Results vector will be non-empty");
 
-        if max_strategy == num_strategies - 1 || thresholds.len() >= 2 {
+        if max_strategy == num_strategies - 1 {
             println!("No further strategy optimization can be made");
             break results;
         }
